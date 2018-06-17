@@ -10,7 +10,7 @@ let rec fib n =
     | 1 -> 1
     | _ -> fib ( n - 1 ) + fib ( n - 2 ) 
 
-let answer = 
+let answer = // 4613732
     Seq.initInfinite (fun n -> n + 1)
     |> Seq.map fib
     |> Seq.filter (fun n -> n % 2 = 0)
